@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fibonacci Series</title>
+    <script>
+      function fibonacci(n) {
+        let fib = [0, 1];
+        for (let i = 2; i < n; i++) {
+          fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        return fib;
+      }
+
+      function displayFibonacci() {
+        const n = parseInt(prompt("Enter a number:"));
+        const fib = fibonacci(n);
+        const result = fib.join(", ");
+        document.getElementById("fibonacci").textContent = result;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Fibonacci Series</h1>
+    <button onclick="displayFibonacci()">Generate Fibonacci</button>
+    <p id="fibonacci"></p>
+  </body>
+</html>

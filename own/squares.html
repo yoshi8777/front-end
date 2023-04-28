@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Squares Table</title>
+  </head>
+  <body>
+    <button onclick="displaySquares()">Generate Squares Table</button>
+
+    <script>
+      function displaySquares() {
+        const n = parseInt(prompt("Enter a number:"));
+        let table = "";
+        for (let i = 1; i <= n; i++) {
+          table += i + " squared is " + i * i + "\n";
+        }
+        alert(table);
+      }
+    </script>
+    </script>
+  </body>
+</html>

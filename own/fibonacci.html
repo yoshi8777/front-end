@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fib</title>
+  </head>
+  <body>
+    <h1>Fibonacci Series :</h1>
+    <button onclick="displayFibonacci()">Generate Fibonacci</button>
+    <p id="fibonacci"></p>
+
+    <script>
+      function fibonacci(n) {
+        let fib = [0, 1];
+        for (let i = 2; i < n; i++) {
+          fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        return fib;
+      }
+      function displayFibonacci() {
+        const n = parseInt(prompt("Enter a number"));
+        const fib = fibonacci(n);
+        const result = fib.join(",");
+        document.getElementById("fibonacci").textContent = result;
+      }
+    </script>
+  </body>
+</html>
