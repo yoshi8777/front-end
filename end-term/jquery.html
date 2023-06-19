@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <button id="btn1">Fade In</button>
+    <button id="btn2">Fade Out</button>
+    <button id="btn3">Fade Toggle</button>
+
+    <div id="div1" style="width: 80px; height: 80px; background-color: aqua"></div>
+    <div id="div2" style="width: 80px; height: 80px; background-color: blueviolet"></Bdo:l></div>
+    <div id="div3" style="width: 80px; height: 80px; background-color: brown"></div>
+    <br>
+
+    <button id="btn-slideUp">Slide Up</button>
+    <button id="btn-slideDown">Slide Down</button>
+    <div id="div-slide" style="width: 80px; height: 80px; background-color: rgb(54, 165, 42)"></div>
+    
+    <button id="btn-hide">Hide</button>
+    <button id="btn-show">Show</button>
+    <div id="div-show" style="width: 80px; height: 80px; background-color: rgb(42, 118, 165)"></div>
+  </body>
+  <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#div1").fadeIn(2000);
+            $("#div2").fadeIn(4000);
+            $("#div3").fadeIn(6000);
+        })
+        $("#btn2").click(function(){
+            $("#div1").fadeOut(2000);
+            $("#div2").fadeOut(4000);
+            $("#div3").fadeOut(6000);
+        })
+        $("#btn3").click(function(){
+            $("#div1").fadeToggle(2000);
+            $("#div2").fadeToggle(4000);
+            $("#div3").fadeToggle(6000);
+        })
+        $("#btn-slideUp").click(function(){
+            $("#div-slide").slideUp();
+        })
+        $("#btn-slideDown").click(function(){
+            $("#div-slide").slideDown();
+        })
+        $("#btn-hide").click(function(){
+            $("#div-show").animate({
+                opacity:1
+            },4000,"swing");
+            $("#div-show").hide();
+        })
+        $("#btn-show").click(function(){
+            $("#div-show").show();
+        })
+        //$(".element").animate({ property: value }, 1000, "linear");
+        //linear,swing,easeInQuad,easeOutElastic
+    })
+  </script>
+</html>
